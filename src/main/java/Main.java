@@ -21,7 +21,7 @@ public class Main {
         BatchPoints batchPoints = BatchPoints
                 .database(dbName)
                 .tag("async", "true")
-                .retentionPolicy("default")
+                .retentionPolicy("autogen")
                 .consistency(InfluxDB.ConsistencyLevel.ALL)
                 .tag("BatchTag", "BatchTagValue") // tag each point in the batch
                 .build();
